@@ -19,7 +19,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 sh 'docker rm -f static-site || true'
-                sh 'docker run -d --name static-site -p 8080:80 devops-assignment-website'
+                sh 'docker run -d --name static-site -p 8081:80 devops-assignment-website'
             }
         }
     }
